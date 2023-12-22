@@ -11,7 +11,7 @@ export interface ApiShowsResponse {
 }
 
 export interface ShowDetails {
-  id: number,
+  id?: number,
   name: string,
   image: {medium: string,}
   summary: string,
