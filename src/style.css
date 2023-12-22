@@ -1,4 +1,10 @@
 .positions {
     position: absolute;
     left: 216px;
+    width: 275px
+}
+
+.movies {
+  position: absolute;
+  top: 30rem;
 }

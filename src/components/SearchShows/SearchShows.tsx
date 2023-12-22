@@ -1,9 +1,10 @@
 import * as React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getShow} from '../../containers/TVShow/thunkShow';
+import {getContent, getShow} from '../../containers/TVShow/thunkShow';
 import {AppDispatch, RootState} from '../../app/store';
 import '../../style.css';
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 const SearchShows = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -35,7 +36,10 @@ const SearchShows = () => {
       </div>
       <div className="positions d-flex flex-column border mt-4 p-2 rounded-2 border-3">
         {valueFromServer.map((item, index) => (
-          <a key={index} href="#" >{item.name}</a>
+          <Link
+            key={index}
+            to={`/shows/${item.id}`}
+            onClick={() => dispatch(getContent(item.id))}>{item.name}</Link>
          ))}
       </div>
     </>

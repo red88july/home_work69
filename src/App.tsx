@@ -1,15 +1,16 @@
-import Navbar from './components/Navbar/Navbar';
-import SearchShows from './components/SearchShows/SearchShows';
+import Layout from './components/Layout/Layout';
+import {Route, Routes} from 'react-router-dom';
+import InfoShows from './components/InfoShows/InfoShows';
 
 function App() {
   return (
     <>
-      <header>
-        <Navbar/>
-      </header>
-      <main>
-        <SearchShows/>
-      </main>
+      <Layout>
+        <Routes>
+          <Route path='/shows/:id' element={<InfoShows />}/>
+        </Routes>
+      </Layout>
+
     </>
   );
 }

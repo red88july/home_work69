@@ -9,3 +9,10 @@ export interface ApiShowsResponse {
     name: string,
   }
 }
+
+export interface ShowDetails {
+  id: number,
+  name: string,
+  image: {medium: string,}
+  summary: string,
+}
