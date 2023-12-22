@@ -40,7 +40,7 @@ const SearchShows = () => {
             key={index}
             to={`/shows/${item.id}`}
             onClick={() => dispatch(getContent(item.id))}>{item.name}</Link>
-         ))}
+        ))}
       </div>
     </>
   );

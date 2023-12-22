@@ -11,7 +11,7 @@ interface ShowsSlice {
 
 const initialState: ShowsSlice = {
   name: [],
-  content:[],
+  content: [],
   loading: false,
   error: false,
 };

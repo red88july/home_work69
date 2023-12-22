@@ -7,7 +7,7 @@ function App() {
     <>
       <Layout>
         <Routes>
-          <Route path='/shows/:id' element={<InfoShows />}/>
+          <Route path="/shows/:id" element={<InfoShows/>}/>
         </Routes>
       </Layout>
 
